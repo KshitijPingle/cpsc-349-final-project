@@ -1,28 +1,23 @@
 import React from "react";
-import styled from "styled-components";
 import Burger from "../img/greetingBurger.jpg";
-
-const Wrapper = styled.div`
-  padding: 20px;
-`;
-
-const Title = styled.h1`
-  color: #333;
-  text-align: center;
-`;
-
-const Image = styled.img`
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-`;
 
 export const Home = () => {
   return (
-    <Wrapper>
-      <Title>Welcome to Joe's Burger</Title>
-      <Image src={Burger} />
-    </Wrapper>
+    <div className="container py-5">
+      <div className="row align-items-center">
+        {/* Text column */}
+        <div className="col-md-6 mb-4 mb-md-0">
+          <h1 className="text-dark">Welcome to Joe's Burger</h1>
+          <p className="lead text-danger fw-bold">
+            The best burgers in town made with fresh ingredients and a whole lot of love.
+          </p>
+        </div>
+
+        {/* Image column */}
+        <div className="col-md-6">
+          <img src={Burger} alt="Burger" className="img-fluid rounded shadow" />
+        </div>
+      </div>
+    </div>
   );
 };
