@@ -3,6 +3,7 @@ import Burger from "../img/greetingBurger.jpg";
 import Deal1 from "../img/doubleBurger.jpg";
 import Deal2 from "../img/chickenNugget.jpg";
 import Deal3 from "../img/newMenu.jpg";
+import { AboutUs } from "../components/AboutUs";
 
 export const Home = () => {
   return (
@@ -30,7 +31,9 @@ export const Home = () => {
       </div>
 
       {/* Deals Section */}
-      <div className="row">
+      <div className="row" style={{ marginTop: "150px" }}>
+        <h1 className="text-dark text-center">Deals and Offers</h1>
+
         {/* Deal 1 */}
         <div className="col-md-4 mb-4">
           <div className="card h-100 shadow-sm rounded">
@@ -102,13 +105,18 @@ export const Home = () => {
               <p className="card-text">
                 Indulge in a juicy double cheeseburger, topped with sweet
                 caramelized onions and melted cheese. A flavorful combination
-                that’s sure to satisfy your cravings.
+                that's sure to satisfy your cravings.
               </p>
               <div className="d-flex justify-content-center mt-auto">
                 <button className="btn btn-danger">View Menu</button>
               </div>
             </div>
           </div>
+        </div>
+
+        {/* About us */}
+        <div className="row" style={{ marginTop: "150px" }}>
+          <AboutUs />
         </div>
       </div>
     </div>
