@@ -4,6 +4,7 @@ import Deal1 from "../img/doubleBurger.jpg";
 import Deal2 from "../img/chickenNugget.jpg";
 import Deal3 from "../img/newMenu.jpg";
 import { AboutUs } from "../components/AboutUs";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
@@ -17,7 +18,9 @@ export const Home = () => {
             of love.
           </p>
           <div className="d-flex justify-content-center">
-            <button className="btn btn-danger">Order Now</button>
+            <Link to="/menu">
+              <button className="btn btn-danger">Order Now</button>
+            </Link>
           </div>
         </div>
         <div className="col-md-6">
@@ -54,7 +57,9 @@ export const Home = () => {
                 choice for any time of day.
               </p>
               <div className="d-flex justify-content-center mt-auto">
-                <button className="btn btn-danger">View Menu</button>
+                <Link to="/menu">
+                  <button className="btn btn-danger">View Menu</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -82,7 +87,9 @@ export const Home = () => {
                 something savory and flavorful.
               </p>
               <div className="d-flex justify-content-center mt-auto">
-                <button className="btn btn-danger">View Menu</button>
+                <Link to="/menu">
+                  <button className="btn btn-danger">View Menu</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -108,14 +115,19 @@ export const Home = () => {
                 that's sure to satisfy your cravings.
               </p>
               <div className="d-flex justify-content-center mt-auto">
-                <button className="btn btn-danger">View Menu</button>
+                <Link to="/menu">
+                  <button className="btn btn-danger">View Menu</button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
 
         {/* About us */}
-        <div className="row" style={{ marginTop: "150px" }}>
+        <div
+          className="row"
+          style={{ marginTop: "150px", marginBottom: "150px" }}
+        >
           <AboutUs />
         </div>
       </div>
