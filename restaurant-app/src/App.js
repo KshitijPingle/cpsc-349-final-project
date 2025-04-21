@@ -2,8 +2,12 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { Menu } from "./pages/Menu";
-import { Home } from "./pages/Home"
-import { CheckOut } from "./pages/Checkout"
+import { Home } from "./pages/Home";
+import { CheckOut } from "./pages/Checkout";
+import { Burgers } from "./pages/Burgers";
+import { Sides } from "./pages/Sides";
+import { Drinks } from "./pages/Drinks";
+import { Deals } from "./pages/Deals";
 
 function App() {
   return (
@@ -15,6 +19,10 @@ function App() {
           <Route index element={<Home />} />
           <Route path="menu" element={<Menu />} />
           <Route path="checkout" element={<CheckOut />} />
+          <Route path="/menu/deals" element={<Deals />} />
+          <Route path="/menu/burgers" element={<Burgers />} />
+          <Route path="/menu/sides" element={<Sides />} />
+          <Route path="/menu/drinks" element={<Drinks />} />
         </Route>
       </Routes>
 
