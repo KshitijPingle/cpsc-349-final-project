@@ -18,7 +18,7 @@ export const Home = () => {
             of love.
           </p>
           <div className="d-flex justify-content-center">
-            <Link to="/menu">
+            <Link to="/menu/deals">
               <button className="btn btn-danger">Order Now</button>
             </Link>
           </div>
