@@ -7,7 +7,7 @@ export const Menu = () => {
       <h1 className="mb-3 text-center">Menu</h1>
       <div className="d-flex gap-3 justify-content-center">
         <Link to={"/menu/deals"}>
-          <button className="btn btn-danger">Deals and Offers</button>
+          <button className="btn btn-danger">Deals</button>
         </Link>
         <Link to={"/menu/burgers"}>
           <button className="btn btn-danger">Burgers</button>

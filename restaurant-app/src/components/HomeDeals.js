@@ -14,7 +14,7 @@ export const HomeDeals = () => {
               <img
                 src={Deal1}
                 className="card-img-top"
-                alt="Veggie Hamburger"
+                alt="2 Veggie Hamburger with Fries"
                 style={{ height: "500px", objectFit: "cover" }}
               />
               <div className="card-body d-flex flex-column">
@@ -30,7 +30,7 @@ export const HomeDeals = () => {
                   choice for any time of day.
                 </p>
                 <div className="d-flex justify-content-center mt-auto">
-                  <Link to="/menu">
+                  <Link to="/menu/deals">
                     <button className="btn btn-danger">View Menu</button>
                   </Link>
                 </div>
@@ -44,7 +44,7 @@ export const HomeDeals = () => {
               <img
                 src={Deal2}
                 className="card-img-top"
-                alt="Pineapple Dragonfruit"
+                alt="Chicken Nuggets with Sauces"
                 style={{ height: "500px", objectFit: "cover" }}
               />
               <div className="card-body d-flex flex-column">
@@ -60,7 +60,7 @@ export const HomeDeals = () => {
                   something savory and flavorful.
                 </p>
                 <div className="d-flex justify-content-center mt-auto">
-                  <Link to="/menu">
+                  <Link to="/menu/sides">
                     <button className="btn btn-danger">View Menu</button>
                   </Link>
                 </div>
@@ -74,7 +74,7 @@ export const HomeDeals = () => {
               <img
                 src={Deal3}
                 className="card-img-top"
-                alt="Pineapple Dragonfruit"
+                alt="Premium Double Cheeseburger"
                 style={{ height: "500px", objectFit: "cover" }}
               />
               <div className="card-body d-flex flex-column">
@@ -88,7 +88,7 @@ export const HomeDeals = () => {
                   that's sure to satisfy your cravings.
                 </p>
                 <div className="d-flex justify-content-center mt-auto">
-                  <Link to="/menu">
+                  <Link to="/menu/burgers">
                     <button className="btn btn-danger">View Menu</button>
                   </Link>
                 </div>
