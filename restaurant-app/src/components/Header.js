@@ -26,7 +26,7 @@ export const Header = () => {
         </a>
         <a
           class="nav-item nav-link"
-          href="checkout"
+          href="/checkout"
           style={{ color: "white", marginLeft: "10px" }}
         >
           Checkout
