@@ -23,7 +23,7 @@ export const Sides = () => {
                   className="text-danger fw-bold text-center"
                   style={{ minHeight: "24px" }}
                 >
-                  {/* blank on purpose */}
+                  Customer Favorite
                 </h6>
                 <h5 className="card-title fw-bold text-center">
                   Chicken Nugget with Sauces
