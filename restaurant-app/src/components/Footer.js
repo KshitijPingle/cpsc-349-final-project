@@ -1,15 +1,21 @@
 import React from "react";
+import icon from "../img/burger_icon.png";
 
 export const Footer = () => {
   return (
     <footer className="row row-cols-1 row-cols-md-5 py-5 my-5 border-top">
-      <div class="col md-3">
+      <div className="col-md-3 d-flex justify-content-center">
         <a
           href="/"
-          class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+          className="d-flex align-items-center justify-content-center mb-3 link-body-emphasis text-decoration-none"
         >
-          {/* Insert Joe's Burger Logo Here */}
-          <p>Logo</p>
+          <img
+            src={icon}
+            alt="Joe's Burger Logo"
+            width="120"
+            height="120"
+            className="me-2"
+          />
         </a>
       </div>
 
