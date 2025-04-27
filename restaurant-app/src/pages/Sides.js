@@ -2,9 +2,18 @@ import React from "react";
 import { Menu } from "../components/Menu";
 import Nugget from "../img/chickenNugget.jpg";
 import Fries from "../img/fries.jpg";
-import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 export const Sides = () => {
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
+
+  const handleAddToCart = (side) => {
+    addToCart(side);
+    navigate("/checkout");
+  };
+
   return (
     <div>
       <Menu />
@@ -30,9 +39,17 @@ export const Sides = () => {
                 </h5>
                 <p className="card-text text-center">$6.99</p>
                 <div className="d-flex justify-content-center mt-auto">
-                  <Link to="/checkout">
-                    <button className="btn btn-danger">Add to cart</button>
-                  </Link>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() =>
+                      handleAddToCart({
+                        name: "Chicken Nugget with Sauces",
+                        price: 6.99,
+                      })
+                    }
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
@@ -58,9 +75,17 @@ export const Sides = () => {
                 </h5>
                 <p className="card-text text-center">$5.99</p>
                 <div className="d-flex justify-content-center mt-auto">
-                  <Link to="/checkout">
-                    <button className="btn btn-danger">Add to cart</button>
-                  </Link>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() =>
+                      handleAddToCart({
+                        name: "French Fries with Sauces",
+                        price: 5.99,
+                      })
+                    }
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>

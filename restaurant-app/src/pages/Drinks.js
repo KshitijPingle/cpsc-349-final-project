@@ -2,9 +2,18 @@ import React from "react";
 import { Menu } from "../components/Menu";
 import Cola from "../img/cola.jpg";
 import Water from "../img/water.jpg";
-import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 export const Drinks = () => {
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
+
+  const handleAddToCart = (drink) => {
+    addToCart(drink);
+    navigate("/checkout");
+  };
+
   return (
     <div>
       <Menu />
@@ -36,9 +45,17 @@ export const Drinks = () => {
                 </h5>
                 <p className="card-text text-center">$1.99</p>
                 <div className="d-flex justify-content-center mt-auto">
-                  <Link to="/checkout">
-                    <button className="btn btn-danger">Add to cart</button>
-                  </Link>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() =>
+                      handleAddToCart({
+                        name: "Spring Water Bottle",
+                        price: 1.99,
+                      })
+                    }
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
@@ -64,9 +81,17 @@ export const Drinks = () => {
                 </h5>
                 <p className="card-text text-center">$2.99</p>
                 <div className="d-flex justify-content-center mt-auto">
-                  <Link to="/checkout">
-                    <button className="btn btn-danger">Add to cart</button>
-                  </Link>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() =>
+                      handleAddToCart({
+                        name: "Coca-Cola Bottle",
+                        price: 2.99,
+                      })
+                    }
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>

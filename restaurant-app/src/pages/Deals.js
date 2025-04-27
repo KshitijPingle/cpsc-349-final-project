@@ -2,8 +2,18 @@ import React from "react";
 import { Menu } from "../components/Menu";
 import Deal1 from "../img/doubleBurger.jpg";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 export const Deals = () => {
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
+
+  const handleAddToCart = (deal) => {
+    addToCart(deal);
+    navigate("/checkout");
+  };
+
   return (
     <div>
       <Menu />
@@ -29,7 +39,17 @@ export const Deals = () => {
                 <p className="card-text text-center">$18.99</p>
                 <div className="d-flex justify-content-center mt-auto">
                   <Link to="/checkout">
-                    <button className="btn btn-danger">Add to cart</button>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() =>
+                        handleAddToCart({
+                          name: "2 Classic Veggie Hamburger with Fries",
+                          price: 18.99,
+                        })
+                      }
+                    >
+                      Add to cart
+                    </button>
                   </Link>
                 </div>
               </div>

@@ -3,8 +3,7 @@ import { Menu } from "../components/Menu";
 import PremBurger from "../img/newMenu.jpg";
 import GarlicBurger from "../img/garlic_burger.jpg";
 import ChickenBurger from "../img/chicken_burger.jpg";
-// import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext"; // adjust path
+import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 
 export const Burgers = () => {
