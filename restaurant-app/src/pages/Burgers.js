@@ -3,15 +3,25 @@ import { Menu } from "../components/Menu";
 import PremBurger from "../img/newMenu.jpg";
 import GarlicBurger from "../img/garlic_burger.jpg";
 import ChickenBurger from "../img/chicken_burger.jpg";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext"; // adjust path
+import { useNavigate } from "react-router-dom";
 
 export const Burgers = () => {
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
+
+  const handleAddToCart = (burger) => {
+    addToCart(burger);
+    navigate("/checkout");
+  };
+
   return (
     <div>
       <Menu />
-
       <div className="container py-5">
         <div className="row">
+          {/* Premium Double Cheeseburger */}
           <div className="col-md-4 mb-4">
             <div className="card h-100 shadow-sm rounded">
               <img
@@ -32,14 +42,23 @@ export const Burgers = () => {
                 </h5>
                 <p className="card-text text-center">$8.99</p>
                 <div className="d-flex justify-content-center mt-auto">
-                  <Link to="/checkout">
-                    <button className="btn btn-danger">Add to cart</button>
-                  </Link>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() =>
+                      handleAddToCart({
+                        name: "Premium Double Cheeseburger",
+                        price: 8.99,
+                      })
+                    }
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* Roasted Garlic Cheeseburger */}
           <div className="col-md-4 mb-4">
             <div className="card h-100 shadow-sm rounded">
               <img
@@ -53,21 +72,30 @@ export const Burgers = () => {
                   className="text-danger fw-bold text-center"
                   style={{ minHeight: "24px" }}
                 >
-                  {/* Intentionally empty to keep height consistent */}
+                  {/* empty */}
                 </h6>
                 <h5 className="card-title fw-bold text-center">
                   Roasted Garlic Cheeseburger
                 </h5>
                 <p className="card-text text-center">$5.99</p>
                 <div className="d-flex justify-content-center mt-auto">
-                  <Link to="/checkout">
-                    <button className="btn btn-danger">Add to cart</button>
-                  </Link>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() =>
+                      handleAddToCart({
+                        name: "Roasted Garlic Cheeseburger",
+                        price: 5.99,
+                      })
+                    }
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* Crispy Chicken Burger */}
           <div className="col-md-4 mb-4">
             <div className="card h-100 shadow-sm rounded">
               <img
@@ -81,16 +109,24 @@ export const Burgers = () => {
                   className="text-danger fw-bold text-center"
                   style={{ minHeight: "24px" }}
                 >
-                  {/* Intentionally empty to keep height consistent */}
+                  {/* empty */}
                 </h6>
                 <h5 className="card-title fw-bold text-center">
                   Crispy Chicken Burger
                 </h5>
                 <p className="card-text text-center">$6.99</p>
                 <div className="d-flex justify-content-center mt-auto">
-                  <Link to="/checkout">
-                    <button className="btn btn-danger">Add to cart</button>
-                  </Link>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() =>
+                      handleAddToCart({
+                        name: "Crispy Chicken Burger",
+                        price: 6.99,
+                      })
+                    }
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
