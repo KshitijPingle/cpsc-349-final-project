@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
-import { Paid } from "./Paid";
+import { Paid } from "../components/Paid";
 
 export const Checkout = () => {
   const { cartItems, removeFromCart } = useCart();
