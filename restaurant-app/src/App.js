@@ -2,7 +2,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
-import { CheckOut } from "./pages/Checkout";
+import { CheckOut } from "./pages/CheckOut";
 import { Burgers } from "./pages/Burgers";
 import { Sides } from "./pages/Sides";
 import { Drinks } from "./pages/Drinks";
